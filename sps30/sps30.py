@@ -74,8 +74,8 @@ class SPS30():
                    "nc10p0" : None,
                    "typical": None}
 
-    def __init__(self):
-        self.bus = SMBus(1)
+    def __init__(self, port):
+        self.bus = SMBus(port)
 
     def read_article_code(self):
         result = []
