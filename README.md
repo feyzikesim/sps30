@@ -20,7 +20,7 @@ From Python script;
 from sps30 import SPS30
 from time import sleep
 
-sps = SPS30()
+sps = SPS30(1)
 
 if sps.read_article_code() == sps.ARTICLE_CODE_ERROR:
     raise Exception("ARTICLE CODE CRC ERROR!")
