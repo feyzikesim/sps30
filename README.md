@@ -44,7 +44,7 @@ else:
 sps.start_measurement()
 
 while not sps.read_data_ready_flag():
-    print("New Measurement is not available!")
+    sleep(0.25)
     if sps.read_data_ready_flag() == sps.DATA_READY_FLAG_ERROR:
         raise Exception("DATA-READY FLAG CRC ERROR!")
 
